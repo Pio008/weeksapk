@@ -1,0 +1,25 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    Label:
+        text: 'Hello, when were you born? (d-m-Y):'
+    
+    TextInput:
+        id: born_date_input
+        multiline: False
+        input_filter: 'int'
+    
+    Button:
+        text: 'Calculate'
+        on_press: root.calculate_weeks()
+    
+    Label:
+        id: result_label
+        text: 'Results will appear here'
+    
+    ProgressBar:
+        id: progress_bar
+        max: 100
+        value: 0
